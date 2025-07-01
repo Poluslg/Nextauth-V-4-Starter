@@ -1,10 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🔐 NextAuth v4 + Next.js + Prisma + ShadCN Starter
 
-## Getting Started
+This is a **starter boilerplate** for building full-stack authentication systems using:
 
-First, run the development server:
+- ✅ [Next.js](https://nextjs.org)
+- ✅ [NextAuth.js v4](https://next-auth.js.org)
+- ✅ [Prisma](https://www.prisma.io)
+- ✅ [ShadCN UI](https://ui.shadcn.dev)
 
-```bash
+It’s designed to help you **quickly set up** a new project with authentication, database integration, and modern UI components.
+
+---
+
+## 🚀 Getting Started
+
+First, clone the repo and install dependencies:
+
+```
+npm install
+# or
+yarn
+# or
+pnpm install
+# or
+bun install
+Then, run the development server:
+
+
 npm run dev
 # or
 yarn dev
@@ -12,25 +33,63 @@ yarn dev
 pnpm dev
 # or
 bun dev
+Visit http://localhost:3000 in your browser to see the result.
+```
+## 🛠 Configuration
+```
+Create a .env file based on .env.example:
+
+env
+DATABASE_URL=""
+NEXTAUTH_SECRET=""
+GITHUB_ID=""
+GITHUB_SECRET=""
+Run Prisma to sync your database:
+
+
+npx prisma db push
+Generate Prisma Client (optional if already synced):
+
+
+npx prisma generate
+Add ShadCN components if needed:
+
+bash
+Copy
+Edit
+npx shadcn-ui@latest add button
+```
+## 📁 File Structure
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+/app         → App Router structure  
+/components  → UI components  
+/lib         → Utilities and configs  
+/prisma      → Prisma schema & migrations
+```
+## 📚 Learn More
+```
+NextAuth.js Documentation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Next.js Documentation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Prisma Documentation
 
-## Learn More
+ShadCN UI
 
-To learn more about Next.js, take a look at the following resources:
+```
+## ☁️ Deploy on Vercel
+```
+Deploy your project using the Vercel Platform:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+👉 Deploy Now
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🤝 Contribute
+This project is meant to serve as a reusable template. Feel free to fork it, suggest improvements, and use it in your own projects.
+```
+## 📄 License-MIT
+```
 
-## Deploy on Vercel
+You can now **copy this entire file content** and paste it directly into your `README.md`. Let me kno
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
